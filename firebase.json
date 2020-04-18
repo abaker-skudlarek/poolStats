@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "poolstats",
+      "public": "dist/poolstats",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

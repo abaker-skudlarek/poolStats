@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "poolstats-8b834": {
+      "hosting": {
+        "poolstats": [
+          "poolstats-8b834"
+        ]
+      }
+    }
+  }
+}

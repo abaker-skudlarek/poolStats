@@ -1,0 +1,44 @@
+<h1>{{title}}</h1>
+
+
+<div *ngIf = "auth.user$ | async as user; else login">
+  <pre>
+    <!-- {{ user | json }} -->
+    Welcome, {{ user.displayName }}
+  </pre>
+  <hr>
+  <button class = "button" (click) = "auth.signOut()"> 
+    Sign Out
+  </button>
+
+  <nav>
+    <li><a routerLink = "/straightPool"> 
+        Straight Pool 
+    </a></li>
+    <li><a routerLink = "/nineBall"> 
+      9 Ball 
+    </a></li>
+    <li><a routerLink = "/matchHistory">
+      Match History
+    </a></li>
+    <li><a routerLink = "/help">
+      Help
+    </a></li>
+  </nav>
+
+  <router-outlet></router-outlet>
+
+
+</div>
+
+<ng-template #login>
+  <button class = "button" (click) = "auth.googleSignIn()">
+    Login with Google
+  </button>
+<ng-template>
+
+<!-- Not sure what this is for. It was on the tutorial but didn't show 
+      anything. Firebase rules need to be updated
+  <app-secret-auth></app-secret-auth> 
+-->
+

@@ -1,0 +1,34 @@
+<h1> Total: {{ game.total }} </h1>
+<h1> Run: {{ game.run }} </h1> <br>
+<h1> Highest Run: {{ game.highestRun }} </h1>
+
+<br>
+
+<div class = "btn-group">
+  <button (click) = "decrement()"> - </button>
+  <button (click) = "increment()"> + </button> 
+</div>
+
+<button (click) = "miss()"> Miss </button>
+
+<br><br><br>
+
+<div>
+  <label> Session Name:
+    <input [(ngModel)] = "game.saveName"/>
+  </label>
+</div>
+
+<br>
+
+<button (click) = submit()> Save Session </button>
+
+<!--
+<form>
+  <label for = saveName> Save Name: </label><br>
+  <input type = "input" [(ngModel)] = "game.saveName"> <br>
+  <font size = "2"> (Today's date will be recorded automatically) </font><br>
+  <input type = "submit" value = "Submit" (click) = "submit()">
+</form>
+-->
+
