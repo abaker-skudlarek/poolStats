@@ -14,6 +14,7 @@ import { StraightPoolComponent } from './straight-pool/straight-pool.component';
 import { NineBallComponent } from './nine-ball/nine-ball.component';
 import { MatchHistoryComponent } from './match-history/match-history.component';
 import { HelpComponent } from './help/help.component';
+import { EightBallComponent } from './eight-ball/eight-ball.component';
 
 const firebaseConfig =
 {
@@ -35,7 +36,8 @@ const firebaseConfig =
     StraightPoolComponent,
     NineBallComponent,
     MatchHistoryComponent,
-    HelpComponent
+    HelpComponent,
+    EightBallComponent
   ],
   imports: [
     BrowserModule,

@@ -5,19 +5,19 @@ import 'firebase/firestore';
 
 import { User } from '../models/user.model';
 import { KEY_CODE } from '../KEY_CODE';
-import { NineBallModel } from '../models/nineBall.model';
+import { EightBallModel } from '../models/eightBall.model';
 
 @Component({
-  selector: 'app-nine-ball',
-  templateUrl: './nine-ball.component.html',
-  styleUrls: ['./nine-ball.component.css']
+  selector: 'app-eight-ball',
+  templateUrl: './eight-ball.component.html',
+  styleUrls: ['./eight-ball.component.css']
 })
 
-export class NineBallComponent implements OnInit
+export class EightBallComponent implements OnInit
 {
   firebaseDB = firebase.firestore();
 
-  game: NineBallModel = {
+  game: EightBallModel = {
     raceTo: 0,
     userScore: 0,
     ghostScore: 0,
@@ -76,9 +76,11 @@ export class NineBallComponent implements OnInit
 
     this.firebaseDB.collection('users')
       .doc(user.uid)
-      .collection('nineBall')
+      .collection('eightBall')
       .add(this.game);
   }
+
+
 
 
 }

@@ -3,9 +3,9 @@ import { Observable } from 'rxjs';
 import * as firebase from 'firebase';
 import 'firebase/firestore';
 
-import { User } from '../user.model';
+import { User } from '../models/user.model';
 import { KEY_CODE } from '../KEY_CODE';
-import { StraightPoolModel } from '../STRAIGHT_POOL_MODEL';
+import { StraightPoolModel } from '../models/straightPool.model';
 
 @Component({
   selector: 'app-straight-pool',
@@ -92,15 +92,9 @@ export class StraightPoolComponent implements OnInit
       .add(this.game);
   }
 
-  /* TODO
-
-      Add confirmation on page that information was saved in firebase
-
-      make data consistent so it doesn't change when page is reloaded
-
-    */
-
 
 }
+
+
 
 
